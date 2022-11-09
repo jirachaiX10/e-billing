@@ -4,6 +4,7 @@ import { AnonymousLayoutComponent } from './components/anonymous-layout.componen
 import { AuthenLayoutComponent } from './components/authen-layout.components';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
+import { MeterComponent } from './components/meter/meter.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-
+      { path: 'meter', component: MeterComponent },
     ],
   },
   {

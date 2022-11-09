@@ -34,13 +34,11 @@ export class LoginComponent implements OnInit {
   async onSubmit(value: any) {
     this.rest.login(value).subscribe({
       next: (response) => {
-        console.log(response)
         if (response.meta.response_desc !== ""){
           localStorage.setItem("access_token", response.meta.response_data.token)
           localStorage.setItem("user_info", JSON.stringify(response.meta.response_data.user_info));
-          console.log(response.meta.response_data.user_info.rule )
           if (response.meta.response_data.user_info.rule === 'User'){
-            this.router.navigate(['/report-tou']);
+            this.router.navigate(['/meter']);
           }
           else {
             this.router.navigate(['/dashboard']);

@@ -34,6 +34,7 @@ import { AnonymousLayoutComponent } from './components/anonymous-layout.componen
 import { AuthenLayoutComponent } from './components/authen-layout.components';
 import { I18nModule } from './i18n/i18n.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MeterComponent } from './components/meter/meter.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AuthenLayoutComponent,
     LoginComponent,
     DashboardComponent,
-    MenuComponent
+    MenuComponent,
+    MeterComponent
   ],
   imports: [
     BrowserModule,
