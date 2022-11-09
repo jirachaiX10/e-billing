@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/meter']);
           }
           else {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/meter']);
           }
         } else {
           alert('login failed')

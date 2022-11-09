@@ -35,6 +35,7 @@ import { AuthenLayoutComponent } from './components/authen-layout.components';
 import { I18nModule } from './i18n/i18n.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MeterComponent } from './components/meter/meter.component';
+import { AvatarPhotoComponent } from './components/menu/avatar-photo/avatar-photo.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MeterComponent } from './components/meter/meter.component';
     LoginComponent,
     DashboardComponent,
     MenuComponent,
-    MeterComponent
+    MeterComponent,
+    AvatarPhotoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,80 @@
+.font-menu {
+    padding-top: 10px;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.stats-cards {
+    .mat-card {
+        overflow: hidden;
+    }
+}
+
+.divider {
+    .mat-divider {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+a {
+    display: inline-block;
+
+    .mat-icon,
+    img {
+        padding-right: 10px;
+        padding-left: 15px;
+    }
+
+}
+
+button {
+    span {
+        font-size: 12px;
+    }
+}
+
+.example-container {
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .example-sidenav {
+     user-select: none;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+  }
+  .menu-button.rotated {
+    transform: rotate(180deg);
+  }
+  .submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+  }
+  .submenu.expanded {
+    transform: scaleY(1);
+  }
+
+
+::ng-deep .mat-menu-panel.noti {
+    width: 700px !important;
+}
+
+.mat-list-item.disabled{
+    cursor: not-allowed !important;
+    opacity: 0.5;
+    text-decoration: none;
+}
