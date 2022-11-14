@@ -32,23 +32,30 @@ export class LoginComponent implements OnInit {
   }
 
   async onSubmit(value: any) {
-    this.rest.login(value).subscribe({
-      next: (response) => {
-        if (response.meta.response_desc !== ""){
-          localStorage.setItem("access_token", response.meta.response_data.token)
-          localStorage.setItem("user_info", JSON.stringify(response.meta.response_data.user_info));
-          if (response.meta.response_data.user_info.rule === 'User'){
-            this.router.navigate(['/meter']);
-          }
-          else {
-            this.router.navigate(['/meter']);
-          }
-        } else {
-          alert('login failed')
-        }
-      },
-      error: (e) => console.error(e)
-    });
+    // this.rest.login(value).subscribe({
+    //   next: (response) => {
+    //     if (response.meta.response_desc !== ""){
+    //       localStorage.setItem("access_token", response.meta.response_data.token)
+    //       localStorage.setItem("user_info", JSON.stringify(response.meta.response_data.user_info));
+    //       if (response.meta.response_data.user_info.rule === 'User'){
+    //         this.router.navigate(['/meter']);
+    //       }
+    //       else {
+    //         this.router.navigate(['/meter']);
+    //       }
+    //     } else {
+    //       alert('login failed')
+    //     }
+    //   },
+    //   error: (e) => console.error(e)
+    // });
+    if (value.email === 'poc' && value.password === "x10") {
+      this.router.navigate(['/meter']);
+      localStorage.setItem("islogin", "true")
+      localStorage.setItem("access_token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJkZW1vQHh0ZW4tdGVjaG5vbG9neS5jb20iLCJ1c2VybmFtZSI6ImRlbW8iLCJwcm9qZWN0X2lkIjoxLCJydWxlIjoiQWRtaW4ifQ.PLJ5yoWDidDbjKcPM6r9s8pkrUp5vPAXuYXUBjS5Xro")
+    } else {
+      alert('login failed')
+    }
   }
 
   selectedValue: string = this.translate.currentLang

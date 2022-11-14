@@ -36,6 +36,7 @@ import { I18nModule } from './i18n/i18n.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MeterComponent } from './components/meter/meter.component';
 import { AvatarPhotoComponent } from './components/menu/avatar-photo/avatar-photo.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AvatarPhotoComponent } from './components/menu/avatar-photo/avatar-phot
     DashboardComponent,
     MenuComponent,
     MeterComponent,
-    AvatarPhotoComponent
+    AvatarPhotoComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

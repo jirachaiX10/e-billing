@@ -13,7 +13,7 @@ const routes: Routes = [
     component: AuthenLayoutComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: '', redirectTo: 'meter', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'meter', component: MeterComponent },
     ],

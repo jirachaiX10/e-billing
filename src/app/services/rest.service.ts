@@ -33,8 +33,8 @@ export class RestService {
     return this.http.post(`${this.apiVersion}/authenticate`, request_data);
   }
 
-  allMeter(): Observable<any> {
-    return this.http.get(`${this.apiVersion}/all_meter`, this.httpOptions);
+  meter(): Observable<any> {
+    return this.http.get(`${this.apiVersion}/meter`, this.httpOptions);
   }
 
   tenant(): Observable<any> {

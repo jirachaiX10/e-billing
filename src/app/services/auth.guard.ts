@@ -19,8 +19,13 @@ export class AuthGuard implements CanActivate {
   }
 
   checkUserLogin(route: ActivatedRouteSnapshot, url: any): boolean {
-    console.log(localStorage.getItem("islogin"))
-    if (this.rest.isLoggedIn !== true) {
+    // console.log(localStorage.getItem("islogin"))
+    // if (this.rest.isLoggedIn !== true) {
+    //   /* First login, new devices, or clare environment */
+    //   window.alert('Access Denied, Login is Required to Access This Page!');
+    //   this.router.navigate(['/login']);
+    // }
+    if (localStorage.getItem("islogin") !== "true") {
       /* First login, new devices, or clare environment */
       window.alert('Access Denied, Login is Required to Access This Page!');
       this.router.navigate(['/login']);
